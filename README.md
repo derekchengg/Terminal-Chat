@@ -7,16 +7,21 @@ This is a basic chat application implemented in C using sockets and threads for 
 Compile the application using a C compiler:
 
 ```bash
-gcc -o s-talk s-talk.c list.c -pthread
+make
 ```
 
 ### How to Run:
+
+How to get name of machine:
+```bash
+hostname
 ```
-./s-talk [my port number] [remote machine name] [remote port number]
+```
+./simpletalk [my port number] [remote machine name] [remote port number]
 ```
 Example
 ```
-./s-talk 6060 csil-cpu3 6001
+./simpletalk 6060 csil-cpu3 6001
 ```
 ## Implementation Details
 - The application uses UDP sockets for communication.
@@ -25,5 +30,5 @@ Example
 - The application handles errors related to socket creation, binding, and message sending/receiving.
   
 ## Code Structure
-- `s-talk.c` contains the main application code.
+- `simpletalk.c` contains the main application code.
 - `list.h` and `list.c` implements a simple linked list data structure used within the application for managing messages.
